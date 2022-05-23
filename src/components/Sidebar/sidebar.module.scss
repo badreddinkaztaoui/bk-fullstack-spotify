@@ -1,0 +1,80 @@
+// Sidebar styles
+.sidebar {
+  background-color: var(--clr-black);
+  padding: 5px;
+  color: var(--clr-gray-400);
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .logo {
+    margin-bottom: 20px;
+    padding: 24px 12px 0;
+  }
+
+  .nav_list {
+    @extend .list;
+    &_link {
+      @extend .link;
+      i {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .music_list {
+    @extend .list;
+    &_link {
+      @extend .link;
+      margin-bottom: 5px;
+      i {
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        background-color: var(--clr-gray-400);
+        display: grid;
+        place-items: center;
+        color: var(--clr-black);
+      }
+    }
+    & > li:last-of-type {
+      i {
+        background-color: rgb(95, 15, 181);
+        color: var(--clr-white);
+      }
+    }
+  }
+
+  .playlists {
+    flex: 1;
+    overflow: auto;
+  }
+}
+
+// List styles
+.list {
+  border-bottom: 1px solid var(--clr-dark);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+// Link styles
+.link {
+  padding: 6px 12px;
+  width: 100%;
+  font-size: 15px;
+  transition: var(--trans);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  opacity: 0.9;
+  span {
+    display: inline-block;
+    margin-inline-start: 10px;
+  }
+  &:hover {
+    color: var(--clr-white);
+    opacity: 1;
+  }
+}

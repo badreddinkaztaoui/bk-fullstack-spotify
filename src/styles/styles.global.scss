@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;600;700&display=swap");
+
+:root {
+  --clr-primary: #1db954;
+  --clr-dark: #191414;
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+  --clr-gray-100: #f2f2f2;
+  --clr-gray-200: #eeeeee;
+  --clr-gray-300: #fefefe;
+  --clr-gray-400: #b3b3b3;
+  --clr-gray-500: #404040;
+  --clr-gray-600: #282828;
+  --clr-gray-700: #181818;
+  --clr-gray-800: #121212;
+  --clr-gray-900: #eeeeee;
+
+  // transitions
+  --trans: all 0.2s ease-in-out;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
