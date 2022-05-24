@@ -1,14 +1,21 @@
+import { Fragment } from "react";
 // Layout
 import Layout from "../Layout";
-// Reset css
-import "reset-css";
+// Styles
 import "../styles/styles.global.scss";
+import "reset-css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Fragment>
+      {Component.public ? (
+        <Component {...pageProps} />
+      ) : (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
+    </Fragment>
   );
 }
 

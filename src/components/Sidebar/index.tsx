@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import NextImage from "next/image";
-import NextLink from "next/link";
+import Link from "next/link";
 // Styles
 import styles from "./sidebar.module.scss";
 // Local Data
@@ -15,24 +15,24 @@ const Sidebar: NextPage = () => {
       <ul className={styles.nav_list}>
         {navMenu.map((link) => (
           <li key={link.name}>
-            <NextLink href={link.route}>
+            <Link href={link.route}>
               <a className={styles.nav_list_link}>
                 <i>{link.icon}</i>
                 <span>{link.name}</span>
               </a>
-            </NextLink>
+            </Link>
           </li>
         ))}
       </ul>
       <ul className={styles.music_list}>
         {musicMenu.map((link) => (
           <li key={link.name}>
-            <NextLink href={link.route}>
+            <Link href={link.route}>
               <a className={styles.music_list_link}>
                 <i>{link.icon}</i>
                 <span>{link.name}</span>
               </a>
-            </NextLink>
+            </Link>
           </li>
         ))}
       </ul>
