@@ -49,6 +49,15 @@
   .playlists {
     flex: 1;
     overflow: auto;
+    padding-inline: 12px;
+
+    &_link {
+      margin-bottom: 10px;
+      transition: var(--trans);
+      &:hover {
+        color: var(--clr-white);
+      }
+    }
   }
 }
 

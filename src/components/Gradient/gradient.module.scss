@@ -1,0 +1,38 @@
+.container {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .info {
+    padding: 40px;
+    display: flex;
+    align-items: flex-end;
+    &_image {
+      width: 180px;
+      height: 180px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      position: relative;
+    }
+    &_text {
+      flex: 1;
+      margin-inline-start: 24px;
+      color: var(--clr-white);
+      font-weight: 600;
+      span {
+        text-transform: uppercase;
+        display: block;
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 62px;
+        margin-block: 11px;
+      }
+      p {
+        font-weight: 500;
+        color: var(--clr-gray-300);
+        font-size: 14px;
+      }
+    }
+  }
+}

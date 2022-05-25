@@ -5,8 +5,13 @@ import Link from "next/link";
 import styles from "./sidebar.module.scss";
 // Local Data
 import { navMenu, musicMenu } from "./data";
+import { usePlaylist } from "../../hooks";
 
 const Sidebar: NextPage = () => {
+  const { playlist } = usePlaylist();
+
+  console.log(playlist);
+
   return (
     <div className={styles.sidebar}>
       <div className={styles.logo}>
@@ -36,7 +41,17 @@ const Sidebar: NextPage = () => {
           </li>
         ))}
       </ul>
-      <ul className={styles.playlists}>{/** User playlists goes here */}</ul>
+      <ul className={styles.playlists}>
+        {playlist.map((plist) => (
+          <li key={plist.id}>
+            <Link href="/">
+              <a className={styles.playlists_link}>
+                <span>{plist.name}</span>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
