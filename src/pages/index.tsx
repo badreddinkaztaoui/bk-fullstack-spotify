@@ -1,12 +1,19 @@
-import { NextPage } from "next";
+import {
+  NextPage,
+  GetServerSideProps,
+  InferGetServerSidePropsType,
+} from "next";
 import { Fragment } from "react";
 import Gradient from "../components/Gradient";
+import prisma from "../lib/prisma";
 
-const Home: NextPage = () => {
+const Home = () => {
+  // console.log(artists);
+
   return (
     <Fragment>
       <Gradient
-        color={273}
+        color={150}
         image="/bk13.png"
         subtitle="Artist"
         title="Badr Kaztaoui"
@@ -18,5 +25,13 @@ const Home: NextPage = () => {
     </Fragment>
   );
 };
+
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const artists = await prisma.artist.findMany({});
+
+//   return {
+//     props: { artists },
+//   };
+// };
 
 export default Home;

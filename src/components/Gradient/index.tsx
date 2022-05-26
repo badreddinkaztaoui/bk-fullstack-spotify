@@ -35,9 +35,9 @@ const Gradient = ({
           <Image src={image} layout="fill" />
         </div>
         <div className={styles.info_text}>
-          <span>{subtitle}</span>
-          <h2>{title}</h2>
-          <p>{description}</p>
+          <span className={styles.info_text_subtitle}>{subtitle}</span>
+          <span className={styles.info_text_title}>{title}</span>
+          <span className={styles.info_text_desc}>{description}</span>
         </div>
       </div>
       {children}

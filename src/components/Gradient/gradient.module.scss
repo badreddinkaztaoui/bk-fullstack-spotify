@@ -20,15 +20,18 @@
       color: var(--clr-white);
       font-weight: 600;
       span {
-        text-transform: uppercase;
         display: block;
+      }
+      &_subtitle {
+        text-transform: uppercase;
         font-size: 14px;
       }
-      h2 {
-        font-size: 62px;
+      &_title {
+        font-size: 6rem;
+        letter-spacing: -4px;
         margin-block: 11px;
       }
-      p {
+      &_desc {
         font-weight: 500;
         color: var(--clr-gray-300);
         font-size: 14px;
